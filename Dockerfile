@@ -13,7 +13,7 @@ RUN apt-get update  && apt update && apt-get install --no-install-recommends -y 
     ros-noetic-desktop-full \
     python3-pip \
     tmux \
-    vim \
+    neovim \
     && rm -rf /var/lib/apt/lists/*
 
 RUN echo "yes" | pip3 install scipy
@@ -51,6 +51,7 @@ RUN sudo mkdir -p -m 755 /etc/apt/keyrings && wget -qO- https://cli.github.com/p
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN echo "cd /ros_ws/" >> ~/.zshrc
+RUN echo "source /ros_ws/devel/setup.zsh"
 
 # Set the entrypoint to source ROS setup.zsh and run a z shell instance
 CMD ["/bin/zsh"]
