@@ -15,5 +15,6 @@ echo "ROS_PROJECT_PATH='$directory_path'" > .env
 echo "Directory path added to .env file."
 
 sudo docker pull ros:noetic-ros-core-focal
+sudo docker build .
 sudo docker-compose up -d
 sudo docker attach ros-dev-vm
