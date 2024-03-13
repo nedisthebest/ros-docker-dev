@@ -11,9 +11,13 @@ RUN apt-get update  && apt update && apt-get install --no-install-recommends -y 
     zsh \
     wget \
     ros-noetic-desktop-full \
+    python3-pip \
+    tmux \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
-    
+RUN echo "yes" | pip3 install scipy
+
 RUN chsh -s $(which zsh)
 
 RUN echo "source /opt/ros/noetic/setup.zsh" >> ~/.zshrc
