@@ -51,7 +51,7 @@ RUN sudo mkdir -p -m 755 /etc/apt/keyrings && wget -qO- https://cli.github.com/p
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN echo "cd /ros_ws/" >> ~/.zshrc
-RUN echo "source /ros_ws/devel/setup.zsh"
+RUN echo "source /ros_ws/devel/setup.zsh" >> ~/.zshrc
 
 # Set the entrypoint to source ROS setup.zsh and run a z shell instance
 CMD ["/bin/zsh"]
