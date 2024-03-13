@@ -1,6 +1,7 @@
 #!/bin/bash
 # Prompt the user for directory input
-read -p "Enter the directory path: " directory_path
+echo "Enter the ABSOLUTE directory path (i.e. no instances of ./):"
+read -p "" directory_path
 
 # Validate if the directory exists
 if [ ! -d "$directory_path" ]; then
