@@ -44,7 +44,7 @@ Once inside the container, press Ctrl + P followed by Ctrl + Q to exit. <br>
 To stop the containers and free up resources, use
 
 ```bash
-docker-compose down
+docker-compose stop
 ```
 
 in the folder where this repo's docker-compose.yml exists. <br>
