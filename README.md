@@ -1,4 +1,4 @@
-# Docker development environment
+# Docker development environment for ROS1 (ROS2 under development)
 
 ## Prerequisites
 
