@@ -7,8 +7,8 @@ services:
     build: ./
     volumes:
       - ${ROS_PROJECT_PATH}:/ros_ws/src/
-      - /Users/nedlane/.config/nvim:/.config/nvim
-      - /Users/nedlane/.config/tmux/:/.config/tmux
+      - /Users/nedlane/.config/tmux/:/root/.config/tmux
+      - /Users/nedlane/.tmux:/root/.tmux
     environment:
       - DISPLAY=novnc:0.0
     networks:
