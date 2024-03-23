@@ -3,6 +3,8 @@
 echo "Enter the ABSOLUTE directory path (i.e. no instances of ./):"
 read -p "" directory_path
 
+touch .env
+
 # Validate if the directory exists
 if [ ! -d "$directory_path" ]; then
     echo "Directory does not exist."
